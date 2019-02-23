@@ -1,0 +1,29 @@
+body {
+  background-color: #1f201f;
+}
+
+.title {
+  align-content: center;
+  font-size: 40px;
+  margin-bottom: 5%;
+  margin-top: 5;
+}
+
+.options {
+  border-color: #e7e7e7;
+  background-color: transparent;
+  color: #e7e7e7;
+  font-size: 40px;
+  border-radius: 10px;
+  cursor: pointer;
+}
+/* 
+.options:hover {
+  background: #e7e7e7;
+  color: black;
+} */
+
+.flash {
+  animation-duration: 4s;
+  animation-iteration-count: infinite;
+}
