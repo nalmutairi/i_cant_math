@@ -16,12 +16,12 @@ class Question extends Component {
 
   end() {
     newsocket.socket.on("end", () =>
-      setTimeout(() => this.props.history.push("/Firework"), 700)
+      setTimeout(() => this.props.history.replace("/Firework"), 700)
     );
   }
 
   loadScores() {
-    newsocket.socket.on("add scores", () =>
+    newsocket.socket.on("points", () =>
       setTimeout(() => this.props.history.push("/Scores"), 700)
     );
   }
