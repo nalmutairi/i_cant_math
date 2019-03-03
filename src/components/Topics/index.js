@@ -1,5 +1,6 @@
 import React, { Component } from "react";
 import { flash, fadeOutLeft, fadeOutRight } from "react-animations";
+import Click from "./sound";
 
 import "./styles.css";
 import { Spring } from "react-spring";
@@ -7,17 +8,21 @@ import { Spring } from "react-spring";
 class Topic extends Component {
   constructor(props) {
     super(props);
-    this.state = { fadeOutLeft: "", fadeOutRight: "" };
+    this.state = { fadeOutLeft: "", fadeOutRight: "", sound: [] };
   }
 
   handleClick() {
     this.setState({
       fadeOutLeft: "animated fadeOutLeft",
-      fadeOutRight: "animated fadeOutRight"
+      fadeOutRight: "animated fadeOutRight",
+      sound: [
+        <div>
+          <Click />
+        </div>
+      ]
     });
 
     setTimeout(() => this.props.history.replace("/Homescreen"), 700);
-    // "/Subtopics/`${id}`"
   }
 
   render() {
@@ -30,7 +35,7 @@ class Topic extends Component {
         </div>
         <div className={this.state.fadeOutLeft}>
           <h3
-            className="options"
+            className="options animated fadeIn fadeIn1 "
             onClick={() => this.handleClick()}
             style={{ color: "white" }}
           >
@@ -39,7 +44,7 @@ class Topic extends Component {
         </div>
         <div className={this.state.fadeOutRight}>
           <h3
-            className="options"
+            className="options animated fadeIn fadeIn2"
             onClick={() => this.handleClick()}
             style={{ color: "white" }}
           >
@@ -48,7 +53,7 @@ class Topic extends Component {
         </div>
         <div className={this.state.fadeOutLeft}>
           <h3
-            className="options"
+            className="options animated fadeIn fadeIn3"
             onClick={() => this.handleClick()}
             style={{ color: "white" }}
           >

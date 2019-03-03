@@ -15,7 +15,7 @@ import Spring from "./components/Topics/spring";
 class App extends Component {
   render() {
     return (
-      <div className="App">
+      <div className="App col-lg-4 col-md-6 col-12">
         <Switch>
           <Route path="/HomeScreen" component={HomeScreen} />
           <Route path="/Topic" component={Topic} />

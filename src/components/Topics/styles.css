@@ -27,3 +27,17 @@ body {
   animation-duration: 4s;
   animation-iteration-count: infinite;
 }
+
+.fadeIn1 {
+  animation-name: fadeIn;
+  animation-delay: 0.5s;
+}
+.fadeIn2 {
+  animation-name: fadeIn;
+  animation-delay: 1s;
+}
+
+.fadeIn3 {
+  animation-name: fadeIn;
+  animation-delay: 1.5s;
+}
