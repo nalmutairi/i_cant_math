@@ -1,14 +1,20 @@
 import React, { Component } from "react";
+
 import posed from "react-pose";
 import "./styles.css";
 import { bounce } from "react-animations";
 import { StyleSheet, css } from "aphrodite";
 import { Link } from "react-router-dom";
 
+//Store
+import SocketStore from "../../stores/socketStore";
+
 class HomeScreen extends Component {
   handleClick() {
+    SocketStore.playNow();
     setTimeout(() => this.props.history.replace("/Topic"), 300);
   }
+
   render() {
     const MathText = posed.div({
       hoverable: true,
@@ -25,7 +31,7 @@ class HomeScreen extends Component {
     });
 
     return (
-      <div className="col-lg-4 col-md-6 col-12">
+      <div className="col-lg-12 col-md-6 col-4">
         <div>
           <MathText
             className="text"
