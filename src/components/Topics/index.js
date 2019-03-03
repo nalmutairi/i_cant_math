@@ -1,5 +1,6 @@
 import React, { Component } from "react";
 import { flash, fadeOutLeft, fadeOutRight } from "react-animations";
+import Click from "./sound";
 
 import SocketStore from "../../stores/socketStore";
 
@@ -12,11 +13,13 @@ class Topic extends Component {
   constructor(props) {
     super(props);
 
+
     this.topics = [
       "Linear Equations",
       "Equations Containing Radicals",
       "Equations Containing Absolute Values"
     ];
+
   }
 
   render() {
@@ -31,7 +34,8 @@ class Topic extends Component {
     ));
 
     return (
-      <div>
+    
+
         <div>
           <div className="title ">
             <h1 className="animated flash" style={{ color: "white" }}>
@@ -39,10 +43,11 @@ class Topic extends Component {
             </h1>
           </div>
           {TopicList}
+
         </div>
-      </div>
+     
     );
-  }
+  
 }
 
 export default Topic;

@@ -2,8 +2,7 @@ import React, { Component } from "react";
 
 import posed from "react-pose";
 import "./styles.css";
-import { bounce } from "react-animations";
-import { StyleSheet, css } from "aphrodite";
+import HomepageSound from "./sound";
 import { Link } from "react-router-dom";
 
 //Store
@@ -31,18 +30,32 @@ class HomeScreen extends Component {
     });
 
     return (
+
       <div className="col-lg-12 col-md-6 col-4">
+
         <div>
-          <MathText
-            className="text"
-            style={{ textDecoration: "none", color: "white" }}
-            onClick={() => this.handleClick()}
-          >
-            Let's Math!
-          </MathText>
-        </div>
-        <div>
-          <p className="plusSign animate bounce">+</p>
+          <HomepageSound />
+          <div>
+            <MathText
+              className="text "
+              style={{ textDecoration: "none", color: "white" }}
+              onClick={() => this.handleClick()}
+            >
+              Let's Math!
+            </MathText>
+          </div>
+          <div>
+            <p className="plusSign ">+</p>
+          </div>
+          <div>
+            <p className="plusSign ">-</p>
+          </div>
+          <div>
+            <p className="plusSign ">x</p>
+          </div>
+          <div>
+            <p className="plusSign ">%</p>
+          </div>
         </div>
       </div>
     );
