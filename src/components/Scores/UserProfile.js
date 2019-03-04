@@ -60,6 +60,8 @@ import Card from "react-bootstrap/Card";
 import CardGroup from "react-bootstrap/CardGroup";
 import CardColumns from "react-bootstrap/CardColumns";
 import { Container, Row, Col } from "reactstrap";
+
+import puff from "../../puff.gif";
 class UserProfile extends Component {
   drawPodium(points) {
     let podium = [];
@@ -115,10 +117,7 @@ class UserProfile extends Component {
               width: 150
             }}
           >
-            <img
-              style={{ width: 150, height: 50 }}
-              src="https://lh5.googleusercontent.com/-3kf_BDC5gcc/TW7TZQKFWTI/AAAAAAAAEok/6Ysj8vQknM8/s400/puffleeat.gif"
-            />
+            <img style={{ width: 150, height: 50 }} src={puff} />
 
             {PodiumList}
           </div>

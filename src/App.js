@@ -2,6 +2,7 @@ import React, { Component } from "react";
 
 import { Route, Switch } from "react-router";
 
+import chalkboard from "./chalkboard.png";
 import logo from "./logo.svg";
 import "./App.css";
 
@@ -22,19 +23,22 @@ import Scores from "./components/Scores";
 class App extends Component {
   render() {
     return (
-      <div className="App col-lg-4 col-md-6 col-12">
-        <Switch>
-          <Route path="/HomeScreen" component={HomeScreen} />
-          <Route path="/Topic" component={Topic} />
-          <Route path="/SubTopic" component={SubTopic} />
-          <Route path="/Difficulty" component={Difficulty} />
-          <Route path="/Question" component={Question} />
-          <Route path="/Answer" component={Answer} />
-          <Route path="/Firework" component={Firework} />
-          <Route path="/Timer" component={Timer} />
-          <Route path="/Spring" component={Spring} />
-          <Route path="/Scores" component={Scores} />
-        </Switch>
+      <div>
+        <div className="App">
+          >
+          <Switch>
+            <Route path="/HomeScreen" component={HomeScreen} />
+            <Route path="/Topic" component={Topic} />
+            <Route path="/SubTopic" component={SubTopic} />
+            <Route path="/Difficulty" component={Difficulty} />
+            <Route path="/Question" component={Question} />
+            <Route path="/Answer" component={Answer} />
+            <Route path="/Firework" component={Firework} />
+            <Route path="/Timer" component={Timer} />
+            <Route path="/Spring" component={Spring} />
+            <Route path="/Scores" component={Scores} />
+          </Switch>
+        </div>
       </div>
     );
   }

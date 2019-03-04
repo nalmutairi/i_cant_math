@@ -25,24 +25,24 @@ class socketStore {
     this.socket.emit("level", level);
   }
 
-  getQuestion() {
-    this.socket.on("FromAPI", data => (this.question = data));
-  }
-
-  getUsers() {
-    this.socket.on("list", data => {
-      console.log("user list data: ", data);
-      this.users = data;
-    });
-  }
-
-  getCode() {
-    this.socket.on("room code", data => {
-      console.log("DATA", data);
-      this.code = data;
-    });
-    this.getUsers();
-  }
+  // getQuestion() {
+  //   this.socket.on("FromAPI", data => (this.question = data));
+  // }
+  //
+  // getUsers() {
+  //   this.socket.on("list", data => {
+  //     console.log("user list data: ", data);
+  //     this.users = data;
+  //   });
+  // }
+  //
+  // getCode() {
+  //   this.socket.on("room code", data => {
+  //     console.log("DATA", data);
+  //     this.code = data;
+  //   });
+  //   this.getUsers();
+  // }
 
   startGame(roomcode) {
     this.socket.emit("start", roomcode);
@@ -68,10 +68,10 @@ newsocket.socket.on("list", data => (newsocket.users = data));
 newsocket.socket.on("room code", data => {
   newsocket.code = data;
 });
-newsocket.socket.on("FromAPI", data => {
-  console.log("IM HERE", data);
-  newsocket.question = data;
-});
+// newsocket.socket.on("FromAPI", data => {
+//   console.log("IM HERE", data);
+//   newsocket.question = data;
+// });
 newsocket.socket.on("points", data => {
   newsocket.scores = data;
 });

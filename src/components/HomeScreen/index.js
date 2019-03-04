@@ -4,7 +4,9 @@ import posed from "react-pose";
 import "./styles.css";
 import HomepageSound from "./sound";
 import { Link } from "react-router-dom";
-
+import plus from "../../plussign.gif";
+import divide from "../../dividesign.gif";
+import minus from "../../minussign.gif";
 //Store
 import SocketStore from "../../stores/socketStore";
 
@@ -30,34 +32,37 @@ class HomeScreen extends Component {
     });
 
     return (
-
-      <div className="col-lg-12 col-md-6 col-4">
-
-        <div>
-          <HomepageSound />
+      <section>
+        <div className="col-lg-12 col-md-6 col-4">
           <div>
-            <MathText
-              className="text "
-              style={{ textDecoration: "none", color: "white" }}
-              onClick={() => this.handleClick()}
-            >
-              Let's Math!
-            </MathText>
-          </div>
-          <div>
-            <p className="plusSign ">+</p>
-          </div>
-          <div>
-            <p className="plusSign ">-</p>
-          </div>
-          <div>
-            <p className="plusSign ">x</p>
-          </div>
-          <div>
-            <p className="plusSign ">%</p>
+            <HomepageSound />
+            <div>
+              <img style={{ height: 120, width: 120 }} src={plus} />
+              <img style={{ height: 120, width: 120 }} src={divide} />
+              <img style={{ height: 120, width: 120 }} src={minus} />
+              <MathText
+                className="text "
+                style={{ textDecoration: "none", color: "white" }}
+                onClick={() => this.handleClick()}
+              >
+                Let's Math!
+              </MathText>
+            </div>
+            <div>
+              <p className="plusSign ">+</p>
+            </div>
+            <div>
+              <p className="plusSign ">-</p>
+            </div>
+            <div>
+              <p className="plusSign ">x</p>
+            </div>
+            <div>
+              <p className="plusSign ">%</p>
+            </div>
           </div>
         </div>
-      </div>
+      </section>
     );
   }
 }
