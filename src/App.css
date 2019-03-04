@@ -1,12 +1,13 @@
 .App {
-  text-align: center;
+  /* text-align: center; */
   background-image: url("chalkboard.png");
   background-repeat: no-repeat;
   background-attachment: fixed;
-  background-size: 100%;
+
+  background-size: cover;
   min-height: 100%;
   min-width: 1024px;
-  width: 100%;
+  width: 100vw;
   height: 100vh;
   position: fixed;
   top: 0;
