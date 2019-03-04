@@ -13,13 +13,11 @@ class Topic extends Component {
   constructor(props) {
     super(props);
 
-
     this.topics = [
       "Linear Equations",
       "Equations Containing Radicals",
       "Equations Containing Absolute Values"
     ];
-
   }
 
   render() {
@@ -34,20 +32,17 @@ class Topic extends Component {
     ));
 
     return (
-    
+      <div>
+        <div className="title ">
+          <h1 className="animated flash" style={{ color: "white" }}>
+            Choose Your Topic!
+          </h1>
 
-        <div>
-          <div className="title ">
-            <h1 className="animated flash" style={{ color: "white" }}>
-              Choose Your Topic!
-            </h1>
-          </div>
           {TopicList}
-
         </div>
-     
+      </div>
     );
-  
+  }
 }
 
 export default Topic;
