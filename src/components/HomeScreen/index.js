@@ -32,36 +32,33 @@ class HomeScreen extends Component {
     });
 
     return (
-
-          <div>
-            <HomepageSound />
-            <div>
-              <img style={{ height: 120, width: 120 }} src={plus} />
-              <img style={{ height: 120, width: 120 }} src={divide} />
-              <img style={{ height: 120, width: 120 }} src={minus} />
-              <MathText
-                className="text "
-                style={{ textDecoration: "none", color: "white" }}
-                onClick={() => this.handleClick()}
-              >
-                Let's Math!
-              </MathText>
-            </div>
-            <div>
-              <p className="plusSign ">+</p>
-            </div>
-            <div>
-              <p className="plusSign ">-</p>
-            </div>
-            <div>
-              <p className="plusSign ">x</p>
-            </div>
-            <div>
-              <p className="plusSign ">%</p>
-            </div>
-          </div>
+      <div>
+        <HomepageSound />
+        <div>
+          <img style={{ height: 120, width: 120 }} src={plus} />
+          <img style={{ height: 120, width: 120 }} src={divide} />
+          <img style={{ height: 120, width: 120 }} src={minus} />
+          <MathText
+            className="text "
+            style={{ textDecoration: "none", color: "white" }}
+            onClick={() => this.handleClick()}
+          >
+            Let's Math!
+          </MathText>
         </div>
-      </section>
+        <div>
+          <p className="plusSign ">+</p>
+        </div>
+        <div>
+          <p className="plusSign ">-</p>
+        </div>
+        <div>
+          <p className="plusSign ">x</p>
+        </div>
+        <div>
+          <p className="plusSign ">%</p>
+        </div>
+      </div>
     );
   }
 }
