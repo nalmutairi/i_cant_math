@@ -19,6 +19,12 @@ class Topic extends Component {
       "Equations Containing Absolute Values"
     ];
   }
+  // handleClick(buttonSound) {
+  //   const sound = new Audio(
+  //     "https://www.pacdv.com/sounds/interface_sound_effects/sound110.wav"
+  //   );
+  //   sound[buttonSound].play;
+  // }
 
   render() {
     let TopicList;
@@ -34,12 +40,13 @@ class Topic extends Component {
     return (
       <div>
         <div className="title ">
-          <h1 className="animated flash" style={{ color: "white" }}>
+
+          <h1 className="title animated flash" style={{ color: "white" }}>
             Choose Your Topic!
           </h1>
-
-          {TopicList}
         </div>
+        {TopicList}
+
       </div>
     );
   }

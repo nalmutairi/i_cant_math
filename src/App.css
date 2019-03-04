@@ -1,5 +1,19 @@
 .App {
-  text-align: center;
+
+  /* text-align: center; */
+  background-image: url("chalkboard.png");
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+
+  background-size: cover;
+  min-height: 100%;
+  min-width: 1024px;
+  width: 100vw;
+  height: 100vh;
+  position: fixed;
+  top: 0;
+  left: 0;
+
 }
 .App-logo {
   animation: App-logo-spin infinite 20s linear;

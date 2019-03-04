@@ -32,8 +32,7 @@ class HomeScreen extends Component {
     });
 
     return (
-      <section>
-        <div className="col-lg-12 col-md-6 col-4">
+
           <div>
             <HomepageSound />
             <div>
