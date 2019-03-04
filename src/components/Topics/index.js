@@ -40,11 +40,13 @@ class Topic extends Component {
     return (
       <div>
         <div className="title ">
+
           <h1 className="title animated flash" style={{ color: "white" }}>
             Choose Your Topic!
           </h1>
         </div>
         {TopicList}
+
       </div>
     );
   }

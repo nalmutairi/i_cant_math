@@ -20,7 +20,7 @@ class TopicName extends Component {
       chosenTopic: topic
     });
 
-    newsocket.choseTopic(topic.toLowerCase().replace(" ", "-"));
+    newsocket.choseTopic(topic.replace(/\s+/g, "-").toLowerCase());
 
     setTimeout(() => history.replace("/Difficulty"), 700);
   }

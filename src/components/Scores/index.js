@@ -2,6 +2,7 @@ import React, { Component } from "react";
 import { observer } from "mobx-react";
 import newsocket from "../../stores/socketStore";
 import UserProfile from "./UserProfile";
+import CardColumns from "react-bootstrap/CardColumns";
 import CardGroup from "react-bootstrap/CardGroup";
 import Card from "react-bootstrap/Card";
 import Table from "react-bootstrap/Table";
@@ -15,7 +16,7 @@ class Scores extends Component {
   }
 
   componentDidMount() {
-    this.transitionBack();
+    // this.transitionBack();
   }
 
   getPoints() {
@@ -30,35 +31,32 @@ class Scores extends Component {
   }
 
   getUserScores() {
-    let users = newsocket.scores;
-    // let users = [
-    //   { username: "BU BADER", points: 2 },
-    //   { username: "BU BADER", points: 3 },
-    //   { username: "BU BADER", points: 3 },
-    //   { username: "BU BADER", points: 0 },
-    //   { username: "BU BADER", points: 1 }
-    // ];
+    // let users = newsocket.scores;
+    let users = [
+      { username: "Asis", points: 7 },
+      { username: "Lailz", points: 3 },
+      { username: "Fawas", points: 0 },
+      { username: "Hams", points: 1 },
+      { username: "Bee", points: 20 }
+    ];
     let UserList;
     if (users) {
       UserList = users.map(user => (
-        <td>
-          <UserProfile user={user} key={user.username} />
-        </td>
+        <UserProfile user={user} key={user.username} />
       ));
     }
 
     return (
-      <div
-        className="container"
+      <CardGroup
         style={{
+          width: "100%",
+
           bottom: 0,
-          position: "absolute",
-          marginLeft: "auto",
-          marginRight: "auto"
+          position: "absolute"
         }}
       >
         {UserList}
-      </div>
+      </CardGroup>
     );
   }
   render() {

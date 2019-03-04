@@ -1,12 +1,10 @@
-body {
-  background-color: #1f201f;
-}
-
 .title {
+
   text-align: center;
   font-size: 100px;
   margin-bottom: 5%;
   margin-top: 80px;
+
 }
 
 .options {
@@ -19,7 +17,7 @@ body {
   cursor: pointer;
   margin-top: 70px;
 }
-/* 
+/*
 .options:hover {
   background: #e7e7e7;
   color: black;
