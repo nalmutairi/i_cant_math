@@ -7,7 +7,7 @@ class socketStore {
     this.users = [];
     this.scores = [];
     this.code = "Test";
-    this.socket = socketIOClient("http://socket.reemcantmath.com/");
+    this.socket = socketIOClient("https://socket.reemcantmath.com/");
 
   }
 
