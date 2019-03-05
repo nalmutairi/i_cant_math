@@ -15,7 +15,8 @@ class UserIcon extends Component {
       <Card
         style={{
           width: 150,
-          backgroundColor: "transparent"
+          backgroundColor: "transparent",
+          border: 0
         }}
       >
         <Card.Body
