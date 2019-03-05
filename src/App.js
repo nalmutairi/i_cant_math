@@ -37,7 +37,8 @@ class App extends Component {
             <Route path="/Timer" component={Timer} />
             <Route path="/Spring" component={Spring} />
             <Route path="/Scores" component={Scores} />
-            <Route component={HomeScreen} />
+            <Route component={HomeScreen}/>
+
           </Switch>
         </div>
       </div>
