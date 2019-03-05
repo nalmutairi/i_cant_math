@@ -1,30 +1,26 @@
 .App {
-
-  /* text-align: center; */
+  text-align: center;
   background-image: url("chalkboard.png");
   background-repeat: no-repeat;
   background-attachment: fixed;
-
-  background-size: cover;
+  background-size: 100%;
   min-height: 100%;
   min-width: 1024px;
-  width: 100vw;
+  width: 100%;
   height: 100vh;
   position: fixed;
   top: 0;
   left: 0;
-
 }
+
 .App-logo {
   animation: App-logo-spin infinite 20s linear;
   height: 40vmin;
   pointer-events: none;
 }
-.background-img {
-  background-image: "url('https://image.freepik.com/free-vector/blackboard-dark-texture_1048-1028.jpg')";
-}
+
 .App-header {
-  background-color: #282c34;
+  background-color: #a9b6ce;
   min-height: 100vh;
   display: flex;
   flex-direction: column;
