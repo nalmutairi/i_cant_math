@@ -23,7 +23,6 @@ import Scores from "./components/Scores";
 class App extends Component {
   render() {
     return (
-
       <div>
         <div className="App">
           >
@@ -39,9 +38,9 @@ class App extends Component {
             <Route path="/Spring" component={Spring} />
             <Route path="/Scores" component={Scores} />
             <Route component={HomeScreen}/>
+
           </Switch>
         </div>
-
       </div>
     );
   }

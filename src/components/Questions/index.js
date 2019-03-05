@@ -15,13 +15,16 @@ class Question extends Component {
       users: [],
       question: ""
     };
+
+    this.userlist = this.state.users;
+    this.showScores();
   }
 
   componentDidMount() {
     this.end();
     // this.loadScores();
     this.getQuestion();
-    this.showScores();
+    // this.showScores(this.userlist);
   }
   end() {
     newsocket.socket.on("end", () =>
@@ -30,7 +33,14 @@ class Question extends Component {
   }
 
   getQuestion() {
-    newsocket.socket.on("FromAPI", data => this.setState({ question: data }));
+    newsocket.socket.on("FromAPI", data => {
+      console.log("QUESTION", this.state.question);
+      console.log("USER", this.state.user);
+      this.setState({ question: data, users: [] });
+
+      console.log("QUESTION!!!!", this.state.question);
+      console.log("USER!!!!", this.state.users);
+    });
   }
 
   loadScores() {
@@ -44,8 +54,9 @@ class Question extends Component {
     newsocket.socket.on("answer", data => {
       console.log(data);
       userlist.push(data);
+      this.setState({ users: data });
+      console.log("SHOWING SCORES", userlist);
     });
-    this.setState({ users: userlist });
   }
 
   showQuestion() {
@@ -71,17 +82,7 @@ class Question extends Component {
     return (
       <div>
         {this.showQuestion()}
-        <div
-          className="col-12"
-          style={{
-            align: "center",
-            width: "100%",
-            position: "absolute",
-            bottom: 0
-          }}
-        >
-          {UserList}
-        </div>
+
         <CardGroup
           style={{
             width: "100%",

@@ -1,5 +1,6 @@
 import React, { Component } from "react";
 import Table from "react-bootstrap/Table";
+import CardGroup from "react-bootstrap/CardGroup";
 import "./styles.css";
 
 import { observer } from "mobx-react";
@@ -53,19 +54,6 @@ class SubTopic extends Component {
     return (
       <div>
         <h1 style={{ color: "white" }}>{this.state.code}</h1>
-
-        <div
-          className="col-12"
-          style={{
-            align: "center",
-            width: "100%",
-            position: "absolute",
-            bottom: 0
-          }}
-        >
-          {UserList}
-        </div>
-
         <button
           onClick={() => {
             SocketStore.startGame(this.state.code);
@@ -74,6 +62,16 @@ class SubTopic extends Component {
         >
           Start Game
         </button>
+        <CardGroup
+          style={{
+            width: "100%",
+
+            bottom: 0,
+            position: "absolute"
+          }}
+        >
+          {UserList}
+        </CardGroup>
       </div>
     );
   }

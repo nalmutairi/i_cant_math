@@ -8,6 +8,7 @@ class socketStore {
     this.scores = [];
     this.code = "Test";
     this.socket = socketIOClient("http://socket.reemcantmath.com/");
+
   }
 
   joinRoom(username, room) {
