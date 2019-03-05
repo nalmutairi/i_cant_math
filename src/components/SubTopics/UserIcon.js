@@ -5,11 +5,12 @@ import puff from "../../puff.gif";
 class UserProfile extends Component {
   render() {
     const { user } = this.props;
+    console.log(user.icon);
 
     return (
       <div>
         <h1 style={{ color: "white" }}>{user.username}</h1>
-        <img style={{ height: 100, width: 150 }} src={puff} />
+        <img style={{ height: 200, width: 250 }} src={user.icon} />
       </div>
     );
   }

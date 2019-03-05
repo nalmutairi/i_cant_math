@@ -7,6 +7,7 @@ import { Link } from "react-router-dom";
 import plus from "../../plussign.gif";
 import divide from "../../dividesign.gif";
 import minus from "../../minussign.gif";
+import multiply from "../../multiplysign.gif";
 //Store
 import SocketStore from "../../stores/socketStore";
 
@@ -35,28 +36,36 @@ class HomeScreen extends Component {
       <div>
         <HomepageSound />
         <div>
-          <img style={{ height: 120, width: 120 }} src={plus} />
-          <img style={{ height: 120, width: 120 }} src={divide} />
+          <img
+            style={{
+              height: 320,
+              width: 320,
+              position: "relative",
+              left: "500px",
+              top: "50px"
+            }}
+            src={plus}
+          />
+          <img
+            style={{
+              height: 320,
+              width: 320,
+              bottom: 50,
+              top: 400,
+              position: "fixed"
+            }}
+            src={divide}
+          />
           <img style={{ height: 120, width: 120 }} src={minus} />
+          <img style={{ height: 120, width: 120 }} src={multiply} />
           <MathText
-            className="text "
+            style={{ textAlign: "center", verticalAlign: "middle" }}
+            className="text"
             style={{ textDecoration: "none", color: "white" }}
             onClick={() => this.handleClick()}
           >
             Let's Math!
           </MathText>
-        </div>
-        <div>
-          <p className="plusSign ">+</p>
-        </div>
-        <div>
-          <p className="plusSign ">-</p>
-        </div>
-        <div>
-          <p className="plusSign ">x</p>
-        </div>
-        <div>
-          <p className="plusSign ">%</p>
         </div>
       </div>
     );
