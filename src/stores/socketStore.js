@@ -7,7 +7,7 @@ class socketStore {
     this.users = [];
     this.scores = [];
     this.code = "Test";
-    this.socket = socketIOClient("http://104.248.142.166:3000");
+    this.socket = socketIOClient("http://104.248.142.166/");
   }
 
   joinRoom(username, room) {
