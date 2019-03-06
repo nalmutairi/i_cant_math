@@ -4,13 +4,12 @@
 }
 .text {
   text-align: center;
-  font-size: 100px;
+  font-size: 90px;
   color: white;
   cursor: pointer;
 
   font-family: "EraserDust";
   margin: 20%;
-
 }
 
 .plusSign {

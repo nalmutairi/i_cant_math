@@ -11,6 +11,17 @@ class Firework extends Component {
         <div className="before" />
         <div className="after" />
         <FireworkSound />
+        <button
+          className="start"
+          style={{
+            alignContent: "center"
+          }}
+          onClick={() => {
+            setTimeout(() => this.props.history.replace("/Homescreen"));
+          }}
+        >
+          Play Again
+        </button>
       </div>
     );
   }

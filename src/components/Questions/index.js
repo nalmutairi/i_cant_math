@@ -81,7 +81,7 @@ class Question extends Component {
     console.log("users who answered", this.state.users);
     return (
       <div>
-        {this.showQuestion()}
+        <h1 className="q"> {this.showQuestion()}</h1>
 
         <CardGroup
           style={{

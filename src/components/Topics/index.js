@@ -33,6 +33,7 @@ class Topic extends Component {
 
     return (
       <div>
+        <Click />
         <div className="title ">
           <h1 className="title animated flash" style={{ color: "white" }}>
             Choose Your Topic!
