@@ -37,8 +37,6 @@ class HomeScreen extends Component {
       <div>
         <HomepageSound />
         <div>
-
-
           <img
             style={{
               height: 280,
@@ -82,11 +80,10 @@ class HomeScreen extends Component {
               width: "100%"
             }}
             className="text"
-
             style={{ textDecoration: "none", color: "white" }}
             onClick={() => this.handleClick()}
           >
-            Let's Math!
+            So You Think You Can Math?
           </MathText>
 
           <div>
@@ -102,7 +99,6 @@ class HomeScreen extends Component {
               src={divide}
             />
           </div>
-
         </div>
       </div>
     );

@@ -53,15 +53,12 @@ class SubTopic extends Component {
     console.log("SOCKET", this.state.code);
     return (
       <div>
-
-        <h1 style={{ color: "white" }}>{this.state.code}</h1>
+        <h1 className="code">{this.state.code}</h1>
 
         <button
-          className="options"
+          className="start"
           style={{
-            alignContent: "center",
-            marginLeft: "45%",
-            marginTop: "0px"
+            alignContent: "center"
           }}
           onClick={() => {
             SocketStore.startGame(this.state.code);
@@ -70,6 +67,14 @@ class SubTopic extends Component {
         >
           Start Game
         </button>
+        <div>
+          <h1 className="link1">
+            Go to <b>m.reemcantmath.com</b> on your{" "}
+            <h1 className="link2">
+              mobile device to join in using the room code below
+            </h1>
+          </h1>
+        </div>
         <CardGroup
           style={{
             width: "100%",

@@ -5,7 +5,6 @@ import "./styles.css";
 
 import posed from "react-pose";
 
-
 class LevelName extends Component {
   constructor(props) {
     super(props);
@@ -48,7 +47,7 @@ class LevelName extends Component {
           <MathText
             className="options"
             onClick={() => this.handleClick(this.props.history, level)}
-            style={{ color: "white", fontFamily: "EraserDust" }}
+            style={{ color: "white", fontFamily: "EraserDust", fontSize: 65 }}
           >
             {level}
           </MathText>
@@ -60,7 +59,7 @@ class LevelName extends Component {
           <MathText
             className="options"
             onClick={() => this.handleClick(this.props.history, level)}
-            style={{ color: "white", fontFamily: "EraserDust" }}
+            style={{ color: "white", fontFamily: "EraserDust", fontSize: 65 }}
           >
             {level}
           </MathText>
