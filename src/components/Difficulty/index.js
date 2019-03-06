@@ -21,6 +21,7 @@ class Difficulty extends Component {
     return (
       <div>
         <div>
+
           <div className="title">
             <h1
               className="animated flash"

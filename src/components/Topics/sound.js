@@ -1,12 +1,15 @@
 import React from "react";
+import ReactPlayer from "react-player";
 
 class Click extends React.Component {
   render() {
     return (
       <div>
-        <audio
-          src="https://www.pacdv.com/sounds/interface_sound_effects/sound110.wav"
-          autoPlay={true}
+        <ReactPlayer
+          url="https://www.youtube.com/watch?v=FwFbwG1Amuw"
+          playing={true}
+          width={"0px"}
+          height={"0px"}
         />
       </div>
     );
