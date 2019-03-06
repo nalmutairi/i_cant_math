@@ -64,7 +64,7 @@ class UserIcon extends Component {
               width: 150
             }}
           >
-            <img style={{ width: 150, height: 150 }} src={puff} />
+            <img style={{ width: 150, height: 150 }} src={user.icon} />
           </div>
         </Card.Body>
       </Card>

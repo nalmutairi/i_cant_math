@@ -125,8 +125,7 @@ class UserProfile extends Component {
 
     for (var i = 0; i < points; i++) {
       var image = new Image();
-      image.src =
-        "https://upload.wikimedia.org/wikipedia/commons/thumb/8/82/Blue_Square.svg/1559px-Blue_Square.svg.png";
+      image.src = "https://i.ibb.co/kSyfPqx/bricktest.png";
       podium.push(image);
       console.log("points", podium);
     }
@@ -144,10 +143,12 @@ class UserProfile extends Component {
       PodiumList = podium.map(pod => (
         <img
           style={{
-            height: 50,
-            width: 150
+            height: 40,
+            width: 150,
+            padding: 0,
+            margin: 0
           }}
-          src="https://upload.wikimedia.org/wikipedia/commons/thumb/8/82/Blue_Square.svg/1559px-Blue_Square.svg.png"
+          src="https://i.ibb.co/kSyfPqx/bricktest.png"
         />
       ));
     }
@@ -175,7 +176,7 @@ class UserProfile extends Component {
               width: 150
             }}
           >
-            <img style={{ width: 150, height: 150 }} src={greenmon} />
+            <img style={{ width: 150, height: 150 }} src={user.icon} />
 
             {PodiumList}
           </div>
