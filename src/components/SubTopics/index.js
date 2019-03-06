@@ -52,7 +52,9 @@ class SubTopic extends Component {
     console.log("SOCKET", this.state.code);
     return (
       <div>
-        <h1 style={{ color: "white" }}>{this.state.code}</h1>
+        <h1 className="options" style={{ color: "white", marginTop: "400px" }}>
+          {this.state.code}
+        </h1>
 
         <div
           className="col-12"
@@ -67,6 +69,12 @@ class SubTopic extends Component {
         </div>
 
         <button
+          className="options"
+          style={{
+            alignContent: "center",
+            marginLeft: "45%",
+            marginTop: "0px"
+          }}
           onClick={() => {
             SocketStore.startGame(this.state.code);
             setTimeout(() => this.props.history.replace("/Question"), 700);
