@@ -1,4 +1,9 @@
+@font-face {
+  font-family: "EraserDust";
+  src: local("EraserDust"), url(./Fonts/EraserDust.ttf) format("woff");
+}
 .App {
+  font-family: "EraserDust";
   text-align: center;
   background-image: url("chalkboard.png");
   background-repeat: no-repeat;
@@ -20,6 +25,7 @@
 }
 
 .App-header {
+  font-family: "EraserDust";
   background-color: #a9b6ce;
   min-height: 100vh;
   display: flex;
@@ -32,6 +38,7 @@
 
 .App-link {
   color: #61dafb;
+  font-family: "EraserDust";
 }
 
 @keyframes App-logo-spin {

@@ -7,6 +7,7 @@ import { Container, Row, Col } from "reactstrap";
 
 import greenmon from "../../greenmonster.png";
 import puff from "../../puff.gif";
+import { px } from "style-value-types";
 class UserIcon extends Component {
   drawPodium(points) {
     let podium = [];
@@ -63,7 +64,7 @@ class UserIcon extends Component {
               width: 150
             }}
           >
-            <img style={{ width: 150, height: 150 }} src={user.icon} />
+            <img style={{ width: 150, height: 150 }} src={puff} />
           </div>
         </Card.Body>
       </Card>

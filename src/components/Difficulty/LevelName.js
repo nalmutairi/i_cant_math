@@ -1,6 +1,10 @@
 import React, { Component } from "react";
 import newsocket from "../../stores/socketStore";
+
+import "./styles.css";
+
 import posed from "react-pose";
+
 
 class LevelName extends Component {
   constructor(props) {
@@ -44,7 +48,7 @@ class LevelName extends Component {
           <MathText
             className="options"
             onClick={() => this.handleClick(this.props.history, level)}
-            style={{ color: "white" }}
+            style={{ color: "white", fontFamily: "EraserDust" }}
           >
             {level}
           </MathText>
@@ -56,7 +60,7 @@ class LevelName extends Component {
           <MathText
             className="options"
             onClick={() => this.handleClick(this.props.history, level)}
-            style={{ color: "white" }}
+            style={{ color: "white", fontFamily: "EraserDust" }}
           >
             {level}
           </MathText>
