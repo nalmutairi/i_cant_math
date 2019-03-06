@@ -1,6 +1,6 @@
 import React, { Component } from "react";
 import { flash, fadeOutLeft, fadeOutRight } from "react-animations";
-import Click from "./sound";
+//import Click from "./sound";
 
 import SocketStore from "../../stores/socketStore";
 
@@ -33,7 +33,7 @@ class Topic extends Component {
 
     return (
       <div>
-        <Click />
+       
         <div className="title ">
           <h1 className="title animated flash" style={{ color: "white" }}>
             Choose Your Topic!
