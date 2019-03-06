@@ -39,34 +39,65 @@ class HomeScreen extends Component {
         <div>
           <img
             style={{
-              height: 320,
-              width: 320,
-              position: "relative",
-              left: "500px",
-              top: "50px"
+              height: 280,
+              width: 280,
+              top: 600,
+              bottom: 60,
+              right: 300,
+              position: "fixed"
             }}
             src={plus}
           />
+
           <img
             style={{
-              height: 320,
-              width: 320,
-              bottom: 50,
-              top: 400,
+              height: 280,
+              width: 280,
+              top: 20,
+              bottom: 600,
+              right: 300,
               position: "fixed"
             }}
-            src={divide}
+            src={minus}
           />
-          <img style={{ height: 120, width: 120 }} src={minus} />
-          <img style={{ height: 120, width: 120 }} src={multiply} />
+          <img
+            style={{
+              height: 280,
+              width: 280,
+              top: 20,
+              bottom: 500,
+              left: 500,
+              position: "fixed"
+            }}
+            src={multiply}
+          />
           <MathText
-            style={{ textAlign: "center", verticalAlign: "middle" }}
+            style={{
+              left: 0,
+              margin: "auto",
+              position: "absolute",
+              top: "50%",
+              width: "100%"
+            }}
             className="text"
             style={{ textDecoration: "none", color: "white" }}
             onClick={() => this.handleClick()}
           >
             Let's Math!
           </MathText>
+          <div>
+            <img
+              style={{
+                height: 280,
+                width: 280,
+                bottom: 20,
+                top: 600,
+                left: 300,
+                position: "fixed"
+              }}
+              src={divide}
+            />
+          </div>
         </div>
       </div>
     );

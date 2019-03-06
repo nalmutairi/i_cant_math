@@ -1,6 +1,7 @@
 import { decorate, observable, computed, action } from "mobx";
 import socketIOClient from "socket.io-client";
 
+import plussign from "../plussign.gif";
 class socketStore {
   constructor() {
     this.question = "";
@@ -8,6 +9,18 @@ class socketStore {
     this.scores = [];
     this.code = "Test";
     this.socket = socketIOClient("http://127.0.0.1:3000");
+    this.iconlist = [
+      "https://i.ibb.co/QpNhg4j/greensunny.gif",
+      "https://i.ibb.co/bXRStJ8/pinkey.gif",
+      "https://i.ibb.co/QpNhg4j/greensunny.gif",
+      "https://i.ibb.co/P1zXHvp/greengerm.gif",
+      "https://i.ibb.co/5MgzbHw/orangesun.gif",
+      "https://i.ibb.co/YPXzCwk/wacko.gif",
+      "https://i.ibb.co/jb2Nsy8/flu.gif"
+    ];
+  }
+  assignUserIcons(userlist, icon) {
+    userlist.forEach((user, index) => (user[icon] = this.iconlist[index]));
   }
 
   joinRoom(username, room) {
@@ -15,6 +28,7 @@ class socketStore {
       username: username,
       room: room
     });
+    console.log(this.users);
   }
 
   choseTopic(topic) {
@@ -64,7 +78,10 @@ decorate(socketStore, {
 });
 
 const newsocket = new socketStore();
-newsocket.socket.on("list", data => (newsocket.users = data));
+newsocket.socket.on("list", data => {
+  newsocket.users = data;
+  console.log(newsocket.users);
+});
 newsocket.socket.on("room code", data => {
   newsocket.code = data;
 });
