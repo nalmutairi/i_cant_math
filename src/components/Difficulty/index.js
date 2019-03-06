@@ -22,7 +22,7 @@ class Difficulty extends Component {
       <div>
         <div>
           <div className="title ">
-            <h1 className="animated flash" style={{ color: "white" }}>
+            <h1 className="title animated flash" style={{ color: "white" }}>
               Choose Your Difficulty!
             </h1>
           </div>

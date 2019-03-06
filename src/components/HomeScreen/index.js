@@ -37,6 +37,8 @@ class HomeScreen extends Component {
       <div>
         <HomepageSound />
         <div>
+
+
           <img
             style={{
               height: 320,
@@ -62,11 +64,13 @@ class HomeScreen extends Component {
           <MathText
             style={{ textAlign: "center", verticalAlign: "middle" }}
             className="text"
+
             style={{ textDecoration: "none", color: "white" }}
             onClick={() => this.handleClick()}
           >
             Let's Math!
           </MathText>
+
         </div>
       </div>
     );

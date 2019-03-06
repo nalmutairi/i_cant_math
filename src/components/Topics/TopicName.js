@@ -2,6 +2,8 @@ import React, { Component } from "react";
 import "./styles.css";
 import newsocket from "../../stores/socketStore";
 import posed from "react-pose";
+import Click from "./sound";
+import ReactPlayer from "react-player";
 
 class TopicName extends Component {
   constructor(props) {
@@ -23,6 +25,11 @@ class TopicName extends Component {
     newsocket.choseTopic(topic.replace(/\s+/g, "-").toLowerCase());
 
     setTimeout(() => history.replace("/Difficulty"), 700);
+    return (
+      <div>
+        <Click />
+      </div>
+    );
   }
 
   getTopics(topic, index) {
