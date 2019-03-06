@@ -1,6 +1,11 @@
 import React, { Component } from "react";
 import newsocket from "../../stores/socketStore";
 
+import "./styles.css";
+
+import posed from "react-pose";
+
+
 class LevelName extends Component {
   constructor(props) {
     super(props);
@@ -23,28 +28,42 @@ class LevelName extends Component {
   }
 
   getLevels(level, index) {
+    const MathText = posed.div({
+      hoverable: true,
+      pressable: true,
+      init: {
+        scale: 1
+      },
+      hover: {
+        scale: 1.2
+      },
+      press: {
+        scale: 1.1
+      }
+    });
+
     if (index % 2 === 0) {
       return (
         <div className={this.state.fadeOutLeft}>
-          <h3
+          <MathText
             className="options"
             onClick={() => this.handleClick(this.props.history, level)}
-            style={{ color: "white" }}
+            style={{ color: "white", fontFamily: "EraserDust" }}
           >
             {level}
-          </h3>
+          </MathText>
         </div>
       );
     } else {
       return (
         <div className={this.state.fadeOutRight}>
-          <h3
+          <MathText
             className="options"
             onClick={() => this.handleClick(this.props.history, level)}
-            style={{ color: "white" }}
+            style={{ color: "white", fontFamily: "EraserDust" }}
           >
             {level}
-          </h3>
+          </MathText>
         </div>
       );
     }

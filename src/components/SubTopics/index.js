@@ -53,8 +53,16 @@ class SubTopic extends Component {
     console.log("SOCKET", this.state.code);
     return (
       <div>
+
         <h1 style={{ color: "white" }}>{this.state.code}</h1>
+
         <button
+          className="options"
+          style={{
+            alignContent: "center",
+            marginLeft: "45%",
+            marginTop: "0px"
+          }}
           onClick={() => {
             SocketStore.startGame(this.state.code);
             setTimeout(() => this.props.history.replace("/Question"), 700);
@@ -65,7 +73,6 @@ class SubTopic extends Component {
         <CardGroup
           style={{
             width: "100%",
-
             bottom: 0,
             position: "absolute"
           }}

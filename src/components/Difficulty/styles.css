@@ -1,0 +1,23 @@
+
+@font-face {
+  font-family: "EraserDust";
+  src: local("EraserDust"), url(../../Fonts/EraserDust.ttf) format("woff");
+
+.title {
+  text-align: center;
+  font-size: 100px;
+  margin-bottom: 5%;
+  margin-top: 80px;
+}
+
+.options {
+  text-align: center;
+  border-color: #e7e7e7;
+  background-color: transparent;
+  color: #e7e7e7;
+  font-size: 40px;
+  border-radius: 10px;
+  cursor: pointer;
+  margin-top: 70px;
+
+}
