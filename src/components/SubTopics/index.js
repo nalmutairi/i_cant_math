@@ -65,7 +65,6 @@ class SubTopic extends Component {
         <CardGroup
           style={{
             width: "100%",
-
             bottom: 0,
             position: "absolute"
           }}
