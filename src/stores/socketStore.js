@@ -68,10 +68,10 @@ newsocket.socket.on("list", data => (newsocket.users = data));
 newsocket.socket.on("room code", data => {
   newsocket.code = data;
 });
-// newsocket.socket.on("FromAPI", data => {
-//   console.log("IM HERE", data);
-//   newsocket.question = data;
-// });
+newsocket.socket.on("FromAPI", data => {
+  console.log("IM HERE", data);
+  newsocket.question = data;
+});
 newsocket.socket.on("points", data => {
   newsocket.scores = data;
 });
