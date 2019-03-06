@@ -175,7 +175,7 @@ class UserProfile extends Component {
               width: 150
             }}
           >
-            <img style={{ width: 150, height: 150 }} src={greenmon} />
+            <img style={{ width: 150, height: 150 }} src={user.icon} />
 
             {PodiumList}
           </div>
