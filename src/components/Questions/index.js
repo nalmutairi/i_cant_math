@@ -17,14 +17,14 @@ class Question extends Component {
     };
 
     this.userlist = this.state.users;
-    this.showScores();
+    // this.showScores();
   }
 
   componentDidMount() {
     this.end();
     // this.loadScores();
     this.getQuestion();
-    // this.showScores(this.userlist);
+    this.showScores(this.userlist);
   }
   end() {
     newsocket.socket.on("end", () =>
@@ -60,10 +60,10 @@ class Question extends Component {
   }
 
   showQuestion() {
-    if (this.state.question) {
+    if (newsocket.question) {
       return (
         <h1 style={{ color: "white" }}>
-          <MathJax math={this.state.question.question} />
+          <MathJax math={newsocket.question.question} />
         </h1>
       );
     } else {
