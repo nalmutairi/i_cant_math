@@ -7,8 +7,7 @@ class socketStore {
     this.users = [];
     this.scores = [];
     this.code = "Test";
-    this.socket = socketIOClient("https://socket.reemcantmath.com/");
-
+    this.socket = socketIOClient("http://127.0.0.1:3000");
   }
 
   joinRoom(username, room) {
@@ -69,10 +68,10 @@ newsocket.socket.on("list", data => (newsocket.users = data));
 newsocket.socket.on("room code", data => {
   newsocket.code = data;
 });
-// newsocket.socket.on("FromAPI", data => {
-//   console.log("IM HERE", data);
-//   newsocket.question = data;
-// });
+newsocket.socket.on("FromAPI", data => {
+  console.log("IM HERE", data);
+  newsocket.question = data;
+});
 newsocket.socket.on("points", data => {
   newsocket.scores = data;
 });
