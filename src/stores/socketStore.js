@@ -24,6 +24,10 @@ class socketStore {
   }
 
   reconnectSocket() {
+    this.question = "";
+    this.users = [];
+    this.scores = [];
+    this.code = "Test";
     this.socket = socketIOClient("https://socket.reemcantmath.com");
   }
 
