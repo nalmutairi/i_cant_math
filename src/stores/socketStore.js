@@ -23,6 +23,10 @@ class socketStore {
     userlist.forEach((user, index) => (user[icon] = this.iconlist[index]));
   }
 
+  reconnectSocket() {
+    this.socket = socketIOClient("https://socket.reemcantmath.com");
+  }
+
   joinRoom(username, room) {
     this.socket.emit("user joined", {
       username: username,
