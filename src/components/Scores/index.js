@@ -31,14 +31,14 @@ class Scores extends Component {
   }
 
   getUserScores() {
-    // let users = newsocket.scores;
-    let users = [
-      { username: "Asis", points: 7 },
-      { username: "Lailz", points: 3 },
-      { username: "Fawas", points: 0 },
-      { username: "Hams", points: 1 },
-      { username: "Bee", points: 20 }
-    ];
+    let users = newsocket.scores;
+    // let users = [
+    //   { username: "Asis", points: 7 },
+    //   { username: "Lailz", points: 3 },
+    //   { username: "Fawas", points: 0 },
+    //   { username: "Hams", points: 1 },
+    //   { username: "Bee", points: 20 }
+    // ];
     let UserList;
     if (users) {
       UserList = users.map(user => (
