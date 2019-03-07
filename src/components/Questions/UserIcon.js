@@ -27,7 +27,9 @@ class UserIcon extends Component {
             justifyContent: "center"
           }}
         >
-          <h1 style={{ color: "pink" }}>{user.username}</h1>
+          <h1 style={{ color: "pink" }}>
+            {user.username} - {user.points}
+          </h1>
           <div
             style={{
               flexDirection: "column",

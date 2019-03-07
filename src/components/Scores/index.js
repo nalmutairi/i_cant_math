@@ -34,6 +34,13 @@ class Scores extends Component {
 
   getUserScores() {
     let users = newsocket.scorelist;
+    let x = users[0];
+    users.forEach(user => {
+      if (user.points > x) {
+        x = user.points;
+      }
+    });
+
     console.log("scorelist", users);
     // let users = [
     //   { username: "Asis", points: 7 },
