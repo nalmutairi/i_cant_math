@@ -19,8 +19,10 @@ import Answer from "./components/Answer";
 import Timer from "./components/Timer";
 import Spring from "./components/Topics/spring";
 import Scores from "./components/Scores";
-
 class App extends Component {
+  componentDidMount() {
+    document.title = "MAAAA";
+  }
   render() {
     return (
       <div>
@@ -37,8 +39,7 @@ class App extends Component {
             <Route path="/Timer" component={Timer} />
             <Route path="/Spring" component={Spring} />
             <Route path="/Scores" component={Scores} />
-            <Route component={HomeScreen}/>
-
+            <Route component={HomeScreen} />
           </Switch>
         </div>
       </div>

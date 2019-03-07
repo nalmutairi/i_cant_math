@@ -4,7 +4,7 @@ import Card from "react-bootstrap/Card";
 import CardGroup from "react-bootstrap/CardGroup";
 import CardColumns from "react-bootstrap/CardColumns";
 import { Container, Row, Col } from "reactstrap";
-
+import PoppingSound from "./poppingsound";
 import greenmon from "../../greenmonster.png";
 import puff from "../../puff.gif";
 import { px } from "style-value-types";
@@ -49,6 +49,7 @@ class UserIcon extends Component {
           border: 0
         }}
       >
+        <PoppingSound />
         <Card.Body
           style={{
             alignItems: "end",
