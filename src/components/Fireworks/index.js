@@ -17,7 +17,7 @@ class Firework extends Component {
             alignContent: "center"
           }}
           onClick={() => {
-            setTimeout(() => this.props.history.replace("/Homescreen"));
+            setTimeout(() => this.props.history.push("/Homescreen"));
           }}
         >
           Play Again
