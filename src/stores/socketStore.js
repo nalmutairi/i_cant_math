@@ -9,7 +9,7 @@ class socketStore {
     this.scorelist = [];
     this.scores = [];
     this.code = "Test";
-    this.socket = socketIOClient("http://127.0.0.1:3000");
+    this.socket = socketIOClient("https://socket.reemcantmath.com");
     this.iconlist = [
       "https://i.ibb.co/QpNhg4j/greensunny.gif",
       "https://i.ibb.co/bXRStJ8/pinkey.gif",
@@ -28,7 +28,7 @@ class socketStore {
     this.question = "";
     this.users = [];
     this.scores = [];
-    this.socket = socketIOClient("http://127.0.0.1:3000");
+    this.socket = socketIOClient("https://socket.reemcantmath.com");
     resetSocket();
   }
 
