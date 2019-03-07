@@ -62,7 +62,7 @@ class Question extends Component {
   showQuestion() {
     if (newsocket.question) {
       return (
-        <h1 style={{ color: "white" }}>
+        <h1 style={{ color: "white" , fontSize: 400 }}>
           <MathJax math={newsocket.question.question} />
         </h1>
       );
