@@ -4,8 +4,7 @@ import Card from "react-bootstrap/Card";
 import CardGroup from "react-bootstrap/CardGroup";
 import CardColumns from "react-bootstrap/CardColumns";
 import { Container, Row, Col } from "reactstrap";
-
-import puff from "../../puff.gif";
+import Sound from "./sound";
 
 class UserIcon extends Component {
   render() {
@@ -19,6 +18,8 @@ class UserIcon extends Component {
           border: 0
         }}
       >
+        {" "}
+        <Sound />
         <Card.Body
           style={{
             alignItems: "end",

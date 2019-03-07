@@ -20,7 +20,7 @@ class Firework extends Component {
           }}
           onClick={() => {
             newsocket.reconnectSocket();
-            setTimeout(() => this.props.history.push("/Homescreen"));
+            setTimeout(() => this.props.history.replace("/Homescreen"));
           }}
         >
           Play Again

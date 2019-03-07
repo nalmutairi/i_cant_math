@@ -13,15 +13,17 @@ class Scores extends Component {
       users: []
     };
     // this.getPoints();
+    this.showScores();
   }
 
-  componentDidMount() {
-    // this.transitionBack();
-  }
+  // componentDidMount() {
+  //   newsocket.socket.on("answer", data => this.setState({ users: data }));
+  // }
 
-  getPoints() {
-    newsocket.socket.on("points", data => {
-      console.log("POINTS", data);
+  showScores() {
+    newsocket.socket.on("answer", data => {
+      console.log("scoressssss", data);
+
       this.setState({ users: data });
     });
   }
@@ -31,7 +33,8 @@ class Scores extends Component {
   }
 
   getUserScores() {
-    let users = newsocket.scores;
+    let users = newsocket.scorelist;
+    console.log("scorelist", users);
     // let users = [
     //   { username: "Asis", points: 7 },
     //   { username: "Lailz", points: 3 },

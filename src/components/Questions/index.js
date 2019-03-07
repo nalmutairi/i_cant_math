@@ -28,7 +28,7 @@ class Question extends Component {
   }
   end() {
     newsocket.socket.on("end", () =>
-      setTimeout(() => this.props.history.replace("/Firework"), 700)
+      setTimeout(() => this.props.history.push("/Firework"), 700)
     );
   }
 

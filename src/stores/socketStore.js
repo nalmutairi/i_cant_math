@@ -6,9 +6,10 @@ class socketStore {
   constructor() {
     this.question = "";
     this.users = [];
+    this.scorelist = [];
     this.scores = [];
     this.code = "Test";
-    this.socket = socketIOClient("https://socket.reemcantmath.com");
+    this.socket = socketIOClient("http://127.0.0.1:3000");
     this.iconlist = [
       "https://i.ibb.co/QpNhg4j/greensunny.gif",
       "https://i.ibb.co/bXRStJ8/pinkey.gif",
@@ -27,8 +28,8 @@ class socketStore {
     this.question = "";
     this.users = [];
     this.scores = [];
-    this.code = "Test";
-    this.socket = socketIOClient("https://socket.reemcantmath.com");
+    this.socket = socketIOClient("http://127.0.0.1:3000");
+    resetSocket();
   }
 
   joinRoom(username, room) {
@@ -86,19 +87,25 @@ decorate(socketStore, {
 });
 
 const newsocket = new socketStore();
-newsocket.socket.on("list", data => {
-  newsocket.users = data;
-  console.log(newsocket.users);
-});
-newsocket.socket.on("room code", data => {
-  newsocket.code = data;
-});
-newsocket.socket.on("FromAPI", data => {
-  console.log("IM HERE", data);
-  newsocket.question = data;
-});
-newsocket.socket.on("points", data => {
-  newsocket.scores = data;
-});
-
+function resetSocket() {
+  newsocket.socket.on("list", data => {
+    newsocket.users = data;
+    console.log(newsocket.users);
+  });
+  newsocket.socket.on("room code", data => {
+    newsocket.code = data;
+  });
+  newsocket.socket.on("answer", data => {
+    console.log("scorelsit LISTE", data);
+    newsocket.scorelist = data;
+  });
+  newsocket.socket.on("FromAPI", data => {
+    console.log("IM HERE", data);
+    newsocket.question = data;
+  });
+  newsocket.socket.on("scorelist", data => {
+    newsocket.scores = data;
+  });
+}
+resetSocket();
 export default newsocket;
