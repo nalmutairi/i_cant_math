@@ -71,7 +71,7 @@ class SubTopic extends Component {
           <h1 className="link1">
             Go to <b>m.reemcantmath.com</b> on your{" "}
             <h1 className="link2">
-              mobile device to join in using the room code below
+              mobile device to join in using the room code above
             </h1>
           </h1>
         </div>
