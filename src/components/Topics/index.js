@@ -14,6 +14,7 @@ class Topic extends Component {
     super(props);
 
     this.topics = [
+      "Arithmetic",
       "Linear Equations",
       "Equations Containing Radicals",
       "Equations Containing Absolute Values"
